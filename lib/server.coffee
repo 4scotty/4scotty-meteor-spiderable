@@ -40,20 +40,20 @@ bindEnvironment = Meteor.bindEnvironment (callback) -> callback()
 # the _escaped_fragment_ protocol, so we need to hardcode a list
 # here. I shed a silent tear.
 Spiderable.userAgentRegExps = [
-	/^facebookExternalHit/i
-	/^linkedinBot/i
-	/^twitterBot/i
-	/^googleBot/i
-	/^bingBot/i
-	/^yandex/i
-	/^google-structured-data-testing-tool/i
-	/^yahoo/i
-	/^MJ12Bot/i
-	/^tweetmemeBot/i
-	/^baiduSpider/i
-	/^Mail\.RU_Bot/i
-	/^ahrefsBot/i
-	/^SiteLockSpider/i
+	/facebookExternalHit/i
+	/linkedinBot/i
+	/twitterBot/i
+	/googleBot/i
+	/bingBot/i
+	/yandex/i
+	/google-structured-data-testing-tool/i
+	/yahoo/i
+	/MJ12Bot/i
+	/tweetmemeBot/i
+	/baiduSpider/i
+	/Mail\.RU_Bot/i
+	/ahrefsBot/i
+	/SiteLockSpider/i
 ]
 
 # allow/deny JavaScript redirects
