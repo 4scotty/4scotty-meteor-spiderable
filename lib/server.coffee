@@ -44,6 +44,7 @@ Spiderable.userAgentRegExps = [
 	/linkedinBot/i
 	/twitterBot/i
 	/googleBot/i
+	/bot\.html/i
 	/bingBot/i
 	/yandex/i
 	/google-structured-data-testing-tool/i
