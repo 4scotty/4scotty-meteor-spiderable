@@ -142,6 +142,9 @@ WebApp.connectHandlers.use (req, res, next) ->
 			# Default image loading to off (we don't need images)
 			if phantomJsArgs.indexOf('--load-images=') == -1
 				phantomJsArgs += ' --load-images=no'
+			# Disk caching (to not reload the same js and css) - max 50 MB
+			if phantomJsArgs.indexOf('--disk-cache=') == -1
+				phantomJsArgs += ' --disk-cache=true'
 			# POODLE means SSLv3 is being turned off everywhere.
 			# phantomjs currently defaults to SSLv3, and won't use TLS.
 			# Use --ssl-protocol to set the default to TLSv1
