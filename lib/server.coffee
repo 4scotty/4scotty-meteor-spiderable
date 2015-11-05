@@ -67,7 +67,7 @@ Spiderable.ignoredRoutes = []
 Spiderable.debug = false
 
 # how long to let phantomjs run before we kill it
-REQUEST_TIMEOUT_IN_MILLISECONDS = 30 * 1000 # 30 seconds
+REQUEST_TIMEOUT_IN_MILLISECONDS = 7 * 1000 # 30 seconds
 
 # maximum size of result HTML. node's default is 200k which is too small for our docs.
 MAX_BUFFER = 10 * 1024 * 1024 # 10MB
