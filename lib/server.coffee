@@ -124,7 +124,7 @@ WebApp.connectHandlers.use (req, res, next) ->
 		)
 
 		Spiderable.originalRequest = req
-		url 		= Spiderable._urlForPhantom Meteor.absoluteUrl(), req.url
+		url 		= Spiderable._urlForPhantom Spiderable.absoluteUrl || Meteor.absoluteUrl(), req.url
 		hash 		= hashCode url
 		cached 	= cacheCollection.findOne {hash}
 
@@ -160,6 +160,7 @@ WebApp.connectHandlers.use (req, res, next) ->
 				phantomJsArgs += ' --web-security=false'
 			# Run phantomjs.
 			fullCommand = "phantomjs #{phantomJsArgs} #{PHANTOM_SCRIPT} #{JSON.stringify(url)}"
+
 			child_process.exec fullCommand
 			,
 				timeout: REQUEST_TIMEOUT_IN_MILLISECONDS
